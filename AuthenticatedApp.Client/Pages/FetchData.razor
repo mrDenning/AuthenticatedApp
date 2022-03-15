@@ -1,0 +1,56 @@
+﻿@page "/fetchdata"
+@using AuthenticatedApp.Models
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject HttpClient Http
+@inject IHttpClientFactory ClientFactory
+@inject IAccessTokenProvider TokenProvider
+@attribute [Authorize]
+
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Date</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.Label</td>
+                    <td>@forecast.Date</td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<DataModel>? forecasts;
+    private APIClient apiClient; 
+
+    protected override async Task OnInitializedAsync()
+    {
+        apiClient = new APIClient(ClientFactory);
+
+        forecasts = await apiClient.GetData();
+    }
+
+    
+}
