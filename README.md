@@ -6,8 +6,10 @@ The sample consists of 3 parts:
 * A simple ASP.NET 6 API with a protected controller returning sample data.
 * A simple ASP.NET Blazor Application with a protected page, which connects to the protected API.
 * A simple model which is shared between the two solutions. 
-*  
+
+
 A prerequisite is to have an Azure B2C tenant already setup for the application to connect to. You will then need to add the following properties into the appsettings.json files (or however you chose to host the configuration for the app).
+
 
 ## AppSettings
 
