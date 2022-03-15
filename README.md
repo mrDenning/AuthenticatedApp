@@ -39,6 +39,9 @@ Refer to the Azure B2C documentation on how to setup and configure the Tenant. I
 
 **Notes**:
 *Authority*:  The SignUpSignIn matches the ones specified in the API Project
+
 *ClientId*: This doesn't have to match the one in the API. If not, you will need to create a Client for the Blazor App
+
 *APIRoot*: This is the URL Blazor will connect to for the API. Depending on your environment, this should be changed. 
+
 *APIScope*: This required for the Blazor App - See [Here](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-5.0#custom-authorizationmessagehandler-class-1) and [Here](https://docs.microsoft.com/en-us/azure/active-directory-b2c/access-tokens) for more information. 
