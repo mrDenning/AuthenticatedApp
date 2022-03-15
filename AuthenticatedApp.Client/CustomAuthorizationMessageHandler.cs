@@ -11,5 +11,5 @@ public class CustomAuthorizationMessageHandler : AuthorizationMessageHandler
         ConfigureHandler(
             authorizedUrls: new[] { conf["APIRoot"] },
             scopes: new[] { conf["APIScope"] });
-    }
+    } 
 }
