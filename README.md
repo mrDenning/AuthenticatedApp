@@ -40,6 +40,7 @@ Refer to the Azure B2C documentation on how to setup and configure the Tenant. I
 
 
 **Notes**:
+
 *Authority*:  The SignUpSignIn matches the ones specified in the API Project
 
 *ClientId*: This doesn't have to match the one in the API. If not, you will need to create a Client for the Blazor App
