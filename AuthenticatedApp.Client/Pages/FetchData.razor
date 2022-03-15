@@ -10,11 +10,11 @@
 
 <PageTitle>Weather forecast</PageTitle>
 
-<h1>Weather forecast</h1>
+<h1>Time Travel</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (forecasts == null)
+@if (dates == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -29,11 +29,11 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var date in dates)
             {
                 <tr>
-                    <td>@forecast.Label</td>
-                    <td>@forecast.Date</td>
+                    <td>@date.Label</td>
+                    <td>@date.Date</td>
                     
                 </tr>
             }
@@ -42,14 +42,14 @@ else
 }
 
 @code {
-    private IEnumerable<DataModel>? forecasts;
+    private IEnumerable<DataModel>? dates;
     private APIClient apiClient; 
 
     protected override async Task OnInitializedAsync()
     {
         apiClient = new APIClient(ClientFactory);
 
-        forecasts = await apiClient.GetData();
+        dates = await apiClient.GetData();
     }
 
     
