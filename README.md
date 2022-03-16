@@ -36,7 +36,7 @@ Refer to the Azure B2C documentation on how to setup and configure the Tenant. I
         "ResponseType": "code id_token token"
       },
       "APIRoot": "https://localhost:7210/api/"
-      "APIScope": "https://squiduob2c.onmicrosoft.com/fb1dcc49-e0a3-48e4-93c5-4fc746c9b7bf/access_app"
+      "APIScope": "https://tenantid.onmicrosoft.com/22222222-2222-2222-2222-222222222222/scope_name"
 
 
 **Notes**:
